@@ -4,5 +4,5 @@
 
 def np_transpose(matrix):
     """returns a transposed version of a given matrix"""
-    transpose_matrix = np.array(matrix)
-    return np.transpose(transpose_matrix)
+    transpose_matrix = matrix.copy()
+    return transpose_matrix.transpose()
