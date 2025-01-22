@@ -29,6 +29,7 @@ class Exponential:
         return pdf_result
 
     def cdf(self, x):
+        """cdf of the exponential distribution"""
         e = 2.7182818285
         if x < 0:
             return 0
