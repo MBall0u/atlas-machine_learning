@@ -30,6 +30,8 @@ class Exponential:
 
     def cdf(self, x):
         e = 2.7182818285
+        if x < 0:
+            return 0
         neg_mean = -1 * self.lambtha
         cdf_result = 1 - e**(neg_mean * x)
         return cdf_result
