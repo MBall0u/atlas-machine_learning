@@ -32,6 +32,6 @@ class Poisson:
 def factorial(x):
         """a function that calculates factorials"""
         result = x
-        for i in range(1, n + 1):
+        for i in range(1, x + 1):
             result *= i
         return result
