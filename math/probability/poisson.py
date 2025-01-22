@@ -34,3 +34,18 @@ class Poisson:
 
         prob = mean_w_k * e_w_neg_mean / fact_k
         return prob
+
+    def cdf(self, k):
+        """calculates the cdf for the given k"""
+        size = len(self.data)
+        k = int(k)
+        if k < 0:
+            return 0
+
+        count = 0.0
+        for value in self.data:
+            if value <= k:
+                count += 1
+        
+        prob = count / size
+        return prob
