@@ -27,3 +27,9 @@ class Exponential:
         pdf_exp = neg_mean * x
         pdf_result = mean * e**pdf_exp
         return pdf_result
+
+    def cdf(self, x):
+        e = 2.7182818285
+        neg_mean = -1 * self.lambtha
+        cdf_result = 1 - e**(neg_mean * x)
+        return cdf_result
