@@ -22,7 +22,7 @@ class Poisson:
         e = 2.7182818285
         mean = self.lambtha
 
-        prob = ((mean**(int(k)))(e**(-mean)) / (factorial(int(k))))
+        prob = ((mean**(int(k)))(e**(-1 * mean)) / (factorial(int(k))))
         return prob
 
 def factorial(x):
