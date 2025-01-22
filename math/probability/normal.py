@@ -10,7 +10,6 @@ class Normal:
         self.stddev = stddev
         self.mean = mean
 
-
         if data is None:
             return
         if not isinstance(data, list):
