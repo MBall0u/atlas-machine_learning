@@ -19,6 +19,8 @@ class Exponential:
 
     def pdf(self, x):
         e = 2.7182818285
+        if x < 0:
+            return 0
         mean = self.lambtha
         neg_mean = -1 * mean
         pdf_exp = neg_mean * x
