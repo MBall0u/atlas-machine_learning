@@ -5,12 +5,12 @@
 class Poisson:
     """the class representation of the poisson distribution"""
     def __init__(self, data=None, lambtha=1.):
+        if lambtha <= 0:
+            raise ValueError("lambtha must be a positive value")
         self.lambtha = lambtha
 
         if data is None:
             return
-        if lambtha <= 0:
-            raise ValueError("lambtha must be a positive value")
         if not isinstance(data, list):
             raise TypeError("data must be a list")
         if len(data) < 2:
