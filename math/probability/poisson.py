@@ -21,20 +21,16 @@ class Poisson:
         """calculates the pmf for the given k"""
         e = 2.7182818285
         mean = self.lambtha
+        neg_mean = -1 * mean
         k = int(k)
         if k < 0:
             return 0
 
         mean_w_k = mean**k
-        e_w_neg_mean = e**-mean
-        fact_k = factorial(k)
+        e_w_neg_mean = e**neg_mean
+        fact_k = 1
+        for i in range(1, k + 1):
+            fact_k *= i
 
         prob = mean_w_k * e_w_neg_mean / fact_k
         return prob
-
-def factorial(x):
-        """a function that calculates factorials"""
-        result = x
-        for i in range(1, x + 1):
-            result *= i
-        return result
