@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
+"""creating the exponential distribution"""
 
 
 class Exponential:
+    """class representation of the exponential distribution"""
     def __init__(self, data=None, lambtha=1.):
         if lambtha < 0:
             raise ValueError("lambtha must be a positive value")
