@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
-""""""
+"""creating the normal distribution"""
 
 
 class Normal:
+    """class representation of the normal distribution"""
     def __init__(self, data=None, mean=0., stddev=1.):
         if stddev <= 0:
             raise ValueError("stddev must be a positive value")
