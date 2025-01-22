@@ -25,5 +25,5 @@ class Exponential:
         mean = self.lambtha
         neg_mean = -1 * mean
         pdf_exp = neg_mean * x
-        pdf_result = (mean * e)**pdf_exp
+        pdf_result = mean * e**pdf_exp
         return pdf_result
