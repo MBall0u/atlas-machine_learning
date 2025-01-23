@@ -43,8 +43,8 @@ class Normal:
 
     def cdf(self, x):
         """the cdf of a given x"""
-        modified_z = (x - self.mean) / (self.stddev * (2**0.5))
+        z = (self.z_score(x) / (2**0.5))
         pi = 3.1415926536
-        erf = (2 / pi**0.5) * (x - (x**3) / 3 + (x**5) / 10 - (x**7) / 42 + (x**9) / 216)
-        cdf_result = 0.5 * (1 + erf * modified_z)
+        erf = (2 / pi**0.5) * (z - (z**3) / 3 + (z**5) / 10 - (z**7) / 42 + (z**9) / 216)
+        cdf_result = 0.5 * (1 + erf)
         return cdf_result
