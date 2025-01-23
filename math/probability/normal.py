@@ -45,6 +45,7 @@ class Normal:
         """the cdf of a given x"""
         z = (self.z_score(x) / (2**0.5))
         pi = 3.1415926536
-        erf = (2 / pi**0.5) * (z - (z**3) / 3 + (z**5) / 10 - (z**7) / 42 + (z**9) / 216)
+        erf = (2 / pi**0.5) * (z - (z**3) / 3 + (z**5) / 10 - (z**7) /
+                               42 + (z**9) / 216)
         cdf_result = 0.5 * (1 + erf)
         return cdf_result
