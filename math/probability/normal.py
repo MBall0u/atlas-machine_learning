@@ -47,3 +47,4 @@ class Normal:
         pi = 3.1415926536
         erf = (2 / pi**0.5) * (x - (x**3) / 3 + (x**5) / 10 - (x**7) / 42 + (x**9) / 216)
         cdf_result = 0.5 * (1 + erf * modified_z)
+        return cdf_result
