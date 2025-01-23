@@ -40,3 +40,10 @@ class Normal:
         main_ep_don = (2 * pi * stddev**2)**0.5
         pdf_result = (1 / main_ep_don) * e**main_exp_eq
         return pdf_result
+
+    def cdf(self, x):
+        """the cdf of a given x"""
+        z = self.z_score(x)
+        pi = 3.1415926536
+        erf = (2 / pi**0.5) * (x - (x**3 / 3) + (x**5 / 10) - (x**7 / 42) + (x**9 / 216))
+        cdf_result = 0.5 * (1 + erf * (z / 2**0.5))
