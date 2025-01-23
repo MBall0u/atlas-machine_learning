@@ -27,3 +27,13 @@ class Normal:
     def x_value(self, z):
         """the x value for a given z"""
         return z * self.stddev + self.mean
+
+    def pdf(self, x):
+        """the pdf ofa given x"""
+        pi = 3.1415926536
+        e = 2.7182818285
+        mean = self.mean
+        stddev = self.stddev
+        exp_eq = -1 * ((x - mean)**2 / 2 * stddev**2)
+        pdf_result = (1 / (2 * pi * stddev**2)**0.5) * e**exp_eq
+        return pdf_result
