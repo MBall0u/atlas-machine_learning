@@ -34,6 +34,9 @@ class Normal:
         e = 2.7182818285
         mean = self.mean
         stddev = self.stddev
-        exp_eq = -1 * ((x - mean)**2 / 2 * stddev**2)
-        pdf_result = (1 / (2 * pi * stddev**2)**0.5) * e**exp_eq
+        exp_num = (x - mean)**2
+        exp_don = 2 * stddev**2
+        main_exp_eq = -1 * (exp_num / exp_don)
+        main_ep_don = (2 * pi * stddev**2)**0.5
+        pdf_result = (1 / main_ep_don) * e**main_exp_eq
         return pdf_result
