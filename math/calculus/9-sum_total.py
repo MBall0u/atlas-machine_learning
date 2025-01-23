@@ -3,8 +3,7 @@
 
 
 def summation_i_squared(n):
-    """might not work wit the for loop :)"""
-    result = 0
-    for i in range(1, n):
-        result += i**2
-    return result
+    """recursive :P"""
+    if n == 0:
+        return 0
+    return (n**2 + summation_i_squared(n - 1))
