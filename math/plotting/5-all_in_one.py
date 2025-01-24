@@ -28,4 +28,5 @@ def all_in_one():
     np.random.seed(5)
     student_grades = np.random.normal(68, 15, 50)
 
-    # your code here
+    fig = plt.figure()
+    fig.suptitle("All in One")
