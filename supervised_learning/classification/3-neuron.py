@@ -38,6 +38,6 @@ class Neuron:
 
     def cost(self, Y, A):
         """calculates the cost of the model using logestic regression"""
-        cost = -np.sum(np.multiply(np.log(A), Y)
-                        + np.multiply(np.log(1.0000001 - A), (1 - Y))) / Y.shape[1]
+        cost = -np.sum(np.multiply(np.log(A), Y) + np.multiply(
+            np.log(1.0000001 - A), (1 - Y))) / Y.shape[1]
         return cost
