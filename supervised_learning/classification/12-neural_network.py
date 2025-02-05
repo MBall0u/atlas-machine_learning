@@ -67,5 +67,5 @@ class NeuralNetwork:
 
     def evaluate(self, X, Y):
         """evaluates the neuron's predictions"""
-        fp = self.forward_prop(X)
+        _, fp = self.forward_prop(X)
         return np.where(fp >= 0.5, 1, 0), self.cost(Y, fp)
