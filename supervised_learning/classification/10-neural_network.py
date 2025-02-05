@@ -55,6 +55,6 @@ class NeuralNetwork:
         """forward propagation for the neural network"""
         z1 = np.dot(self.__W1, X) + self.__b1
         self.__A1 = 1 / (1 + np.exp(-z1))
-        z2 = np.dot(self.__W2, X) + self.__b2
+        z2 = np.dot(self.__W2, self.__A1) + self.__b2
         self.__A2 = 1 / (1 + np.exp(-z2))
         return self.__A1, self.__A2
