@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 """ Placeholders """
 import tensorflow.compat.v1 as tf
 
